@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { OverviewComponent } from './overview/overview.component';
+import { AppBar } from './ui/app-bar';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OverviewComponent
+    OverviewComponent,
+    AppBar
   ],
   imports: [
     BrowserModule,
