@@ -5,7 +5,6 @@ export default function jsonp(url: string, callback: Function) {
     window[callbackName] = (data): void => {
 	    delete window[callbackName];
 	    document.body.removeChild(script);
-      
 	    callback(data);
 	};
 

@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
       <span class="logo col-xs-10">
         Awesome Weather
       </span>
-      <nav class="col-xs-2">
+      <div class="col-xs-2">
         <div class="row middle-xs between-xs">
-          <span class="link">Copyright</span>
+          <span class="data">Dein Standort: </span>
         </div>
-      </nav>
+      </div>
     </header>
   `,
   styles: [`
@@ -26,9 +26,9 @@ import { Component } from '@angular/core';
       font-weight: 300;
       cursor: pointer;
     }
-    .link {
+    .data {
       color: white;
-      font-size: 14px;
+      font-size: 12px;
       line-height: 1.3em;
       font-weight: 400;
       cursor: pointer;

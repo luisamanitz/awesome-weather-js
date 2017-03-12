@@ -1,6 +1,6 @@
 export default function timeConverter(timestamp){
   let timestring = new Date(timestamp * 1000),
-      months = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'],
+      months = 'Januar,Februar,März,April,Mai,Juni,Juli,August,September,Oktober,November,Dezember'.split(','),
       year = timestring.getFullYear(),
       month = months[timestring.getMonth()],
       date = timestring.getDate(),
