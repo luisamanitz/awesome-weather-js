@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 * {
   font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
 }
 
 .logo {
@@ -25,6 +26,45 @@
   cursor: pointer;
 }
 
+.special-val {
+  text-align: center;
+}
+
+.cur-temp {
+  padding-top: 33px;
+  font-size: 2.3em;
+  display: block;
+}
+
+.cur-data {
+  font-size: 0.9em;
+  padding-left: 1em;
+}
+
+.main-content {
+  padding: 2em 0 15px 0;
+}
+
+.col-xs-12,
+.col-xs-8,
+.col-xs-4 {
+  position: relative;
+  float: left;
+}
+
+.col-xs-12 {
+  width: 100%;
+}
+
+.col-xs-8 {
+  width: 66.66667%;
+}
+
+.col-xs-4 {
+  width: 33.33333%;
+}
+
+
 .clear-day::before {
   content:"\f00d";
   font-size: 40px;
@@ -41,6 +81,7 @@
   min-width: 54px;
   text-align: center;
 }
+
 .clear-night {
   content:"<i class="wi wi-night-sleet"></i>";
   font-family: "";
@@ -66,11 +107,11 @@
   font-family: "";
 }
 .cloudy {
-  content:"<i class="wi wi-night-sleet"></i>";
+  content:"<i class="wi wi-cloudy"></i>";
   font-family: "";
 }
 .partly-cloudy-day {
-  content:"<i class="wi wi-night-sleet"></i>";
+  content:"<i class="wi wi-day-cloudy"></i>";
   font-family: "";
 }
 .partly-cloudy-nighthail {

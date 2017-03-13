@@ -18,6 +18,8 @@
       "tsconfig": "tsconfig.json",
       "prefix": "app",
       "styles": [
+        "../node_modules/weathericons/css/weather-icons.css"
+        "../node_modules/weathericons/css/weather-icons.min.css"
         "styles.css"
       ],
       "scripts": [],
@@ -27,6 +29,9 @@
         "prod": "environments/environment.prod.ts"
       }
     }
+  ],
+  "addons": [
+    "../node_modules/weathericons/font/*.+(otf|eot|svg|ttf|woff|woff2)"
   ],
   "e2e": {
     "protractor": {

@@ -9,23 +9,23 @@ import { Observable } from 'rxjs/Observable';
     styleUrls: ['./app.component.css'],
     template: `
       <div>
-        <header class="app-bar row">
-          <span class="logo" style="border:1px solid red;">
+        <header class="app-bar">
+          <span class="logo">
             Awesome Weather
           </span>
-          <div class="col-xs-12">
+          <div>
               <span class="data">Your Position: {{data.latitude}},{{data.longitude}}</span>
           </div>
         </header>
-        <div class="row {{data.icon}}">
-            <div class="col-xs-4">
-              <span class="cur-temp cur-data {{data.icon}}">{{data.temp}}\xB0C</span>
+        <div class="main-content">
+            <div class="special-val col-xs-4">
+              <span class="cur-temp {{data.icon}}">{{data.temp}}\xB0C</span>
             </div>
-            <div class="col-xs-8">
-                <span class="cur-data">Date: {{data.today}} {{data.timezone}}</span>
-                <span class="cur-data">Summary: {{data.summary}}</span>
-                <span class="cur-data">Precipitation: {{data.precip}}%</span>
-                <span class="cur-data">Humidity: {{data.humidity}}%</span>
+            <div class="detail-val col-xs-8">
+                <span class="cur-data col-xs-12">Date: {{data.today}} {{data.timezone}}</span>
+                <span class="cur-data col-xs-12">Summary: {{data.summary}}</span>
+                <span class="cur-data col-xs-12">Precipitation: {{data.precipitation}}%</span>
+                <span class="cur-data col-xs-12">Humidity: {{data.humidity}}%</span>
             </div>
           </div>
         </div>

@@ -32,7 +32,7 @@ export default class ApiService {
               month = months[timestring.getMonth()],
               date = timestring.getDate(),
               hour = timestring.getHours(),
-              time = date + ' ' + month + ' ' + year + ', ' + hour + 'h' ;
+              time = date + '. ' + month + ' ' + year + ', ' + hour + 'h' ;
 
           return time;
         })(data.currently.time);
