@@ -7,12 +7,14 @@ import { Component, Injectable, Inject } from '@angular/core';
 
 @Injectable()
 export default class WeatherService {
-  public icon = 'TEST';
-  public temprature = 'UHU';
+  public icon = 'clear-day';
+  public temprature:number = 0.1;
+  public coordLat = 'Latitude';
+  public coordLon = 'Longitude';
 
   public setData = (json) => {
-    
-    this.temprature = 'LOS!';
+
+    this.temprature = -0.66;
   };
 
   public getLocation = (pos) => {

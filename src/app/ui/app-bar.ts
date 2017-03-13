@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import WeatherService from '../utils/weather-service';
+
 
 @Component({
   selector: 'app-bar',
@@ -9,7 +11,7 @@ import { Component } from '@angular/core';
       </span>
       <div class="col-xs-2">
         <div class="row middle-xs between-xs">
-          <span class="data">Dein Standort: </span>
+          <span class="data">Dein Standort: {{wS.coordLat}},{{wS.coordLon}}</span>
         </div>
       </div>
     </header>
@@ -36,4 +38,9 @@ import { Component } from '@angular/core';
     `]
 })
 
-export class AppBar {}
+export class AppBar {
+
+    constructor(public wS: WeatherService) {
+        wS.getData();
+    }
+}

@@ -3,7 +3,6 @@ import location from '../utils/loc';
 import jsonp from '../utils/jsonp';
 import WeatherService from '../utils/weather-service';
 
-
 @Component({
   selector: 'main-container',
   providers: [WeatherService],
@@ -11,8 +10,10 @@ import WeatherService from '../utils/weather-service';
     <div class="main-container">
       <app-bar></app-bar>
       <main class="main">
-        Datum:{{wS.temprature}}
-        Koordinaten:
+        <div class="current-weather {{wS.icon}}">
+          Temperatur: {{wS.temprature}}\xB0C <br />
+          Noch ein Wert: 123 <br />
+        </div>
 
       </main>
     </div>
