@@ -32,7 +32,7 @@
 
 .cur-temp {
   padding-top: 33px;
-  font-size: 2.3em;
+  font-size: 2em;
   display: block;
 }
 
@@ -66,63 +66,38 @@
 
 
 .clear-day::before {
-  content:"\f00d";
-  font-size: 40px;
-  display: inline-block;
-  font-family: 'weathericons';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  float: left;
-  margin-right: 15px;
-  margin-bottom: 15px;
-  min-width: 54px;
-  text-align: center;
+  content:"<i class="wi wi-day-sunny"></i>";
 }
-
-.clear-night {
-  content:"<i class="wi wi-night-sleet"></i>";
-  font-family: "";
+.clear-night::before {
+  content:"<i class="wi wi-night-clear"></i>";
 }
-.rain {
-  content:"<i class="wi wi-night-sleet"></i>";
-  font-family: "";
+.rain::before {
+  content:"<i class="wi wi-rain"></i>";
 }
-.snow {
-  content:"<i class="wi wi-night-sleet"></i>";
-  font-family: "";
+.snow::before {
+  content:"<i class="wi wi-day-snow"></i>";
 }
-.sleet {
-  content:"<i class="wi wi-night-sleet"></i>";
-  font-family: "";
+.sleet::before {
+  content:"<i class="wi wi-day-sleet"></i>";
 }
-.wind {
-  content:"<i class="wi wi-night-sleet"></i>";
-  font-family: "";
+.wind::before {
+  content:"<i class="wi wi-windy"></i>";
 }
-.fog {
-  content:"<i class="wi wi-night-sleet"></i>";
-  font-family: "";
+.fog::before {
+  content:"<i class="wi wi-fog"></i>";
 }
-.cloudy {
+.cloudy::before {
   content:"<i class="wi wi-cloudy"></i>";
-  font-family: "";
 }
-.partly-cloudy-day {
+.partly-cloudy-day::before {
   content:"<i class="wi wi-day-cloudy"></i>";
-  font-family: "";
 }
-.partly-cloudy-nighthail {
-  content:"<i class="wi wi-night-sleet"></i>";
-  font-family: "";
+.partly-cloudy-nighthail::before {
+  content:"<i class="wi wi-night-cloudy"></i>";
 }
-.thunderstorm {
-  content:"<i class="wi wi-night-sleet"></i>";
-  font-family: "";
+.thunderstorm::before {
+  content:"<i class="wi wi-day-thunderstorm"></i>";
 }
-.tornado {
-  content:"<i class="wi wi-night-sleet"></i>";
-  font-family: "";
+.tornado::before {
+  content:"<i class="wi wi-tornado"></i>";
 }
