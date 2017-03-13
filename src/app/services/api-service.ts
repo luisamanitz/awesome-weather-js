@@ -22,16 +22,30 @@ export default class ApiService {
         let data = res.json();
         let temp = ((f) => {
           let temperature = (f - 32) * 5 / 9;
-          // runden
-          return temperature;
+          return Math.round((temperature) * 100) / 100;
         })(data.currently.temperature);
-        // this.getCelsius(data.currently.temperature);
+
+        let date = ((timestamp) => {
+          let timestring = new Date(timestamp * 1000),
+              months = 'Jan,Feb,Mar,Apr,Myi,Jun,Jul,Aug,Sep,Oct,Nov,Dec'.split(','),
+              year = timestring.getFullYear(),
+              month = months[timestring.getMonth()],
+              date = timestring.getDate(),
+              hour = timestring.getHours(),
+              time = date + ' ' + month + ' ' + year + ', ' + hour + 'h' ;
+
+          return time;
+        })(data.currently.time);
 
         let result = {
             icon: data.currently.icon,
-            latitude: data.latitude,
-            longitude: data.longitude,
-            temp: temp
+            latitude: Math.round((data.latitude) * 100) / 100,
+            longitude: Math.round((data.longitude) * 100) / 100,
+            temp: temp,
+            today: date,
+            precipitation: data.currently.precipProbability,
+            humidity: data.currently.humidity,
+            summary: data.currently.summary,
         }
 
         return result || { };
@@ -45,7 +59,6 @@ export default class ApiService {
         let coord = this.geoLocation.coords;
 
         this.apiUrl = `https://api.darksky.net/forecast/f4cdaf9c94d44202f8638115338f52a4/${coord.latitude},${coord.longitude}`;
-
 
         return this.jsonp
             .get(this.apiUrl, { search: params })

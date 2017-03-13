@@ -8,33 +8,31 @@ import { Observable } from 'rxjs/Observable';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
     template: `
-    <div>
-        <header class="app-bar row middle-xs">
-          <span class="logo col-xs-10">
+      <div>
+        <header class="app-bar row">
+          <span class="logo" style="border:1px solid red;">
             Awesome Weather
           </span>
-          <div class="col-xs-2">
-            <div class="row middle-xs between-xs">
+          <div class="col-xs-12">
               <span class="data">Your Position: {{data.latitude}},{{data.longitude}}</span>
-            </div>
           </div>
         </header>
-        <div class="currently {{data.icon}}" >
-            {{selectedItem.name}}
-            {{data.timezone}}
-            {{data.latitude}}
-            {{data.longitude}}
-            {{data.temp}}
+        <div class="row {{data.icon}}">
+            <div class="col-xs-4">
+              <span class="cur-temp cur-data {{data.icon}}">{{data.temp}}\xB0C</span>
+            </div>
+            <div class="col-xs-8">
+                <span class="cur-data">Date: {{data.today}} {{data.timezone}}</span>
+                <span class="cur-data">Summary: {{data.summary}}</span>
+                <span class="cur-data">Precipitation: {{data.precip}}%</span>
+                <span class="cur-data">Humidity: {{data.humidity}}%</span>
+            </div>
+          </div>
         </div>
-        <h2>
-            JAJA!
-        </h2>
-        </div>
-        `
+    `
 })
 export class AppComponent implements OnInit {
-    title = 'app works!';
-    hero = 'Whatever';
+    title = 'AwesomeWeatherJs';
     selectedItem = '';
 
     data = {};
