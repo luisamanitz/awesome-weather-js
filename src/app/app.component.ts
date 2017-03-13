@@ -8,13 +8,28 @@ import { Observable } from 'rxjs/Observable';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
     template: `
-        <h1 async>
+    <div>
+        <header class="app-bar row middle-xs">
+          <span class="logo col-xs-10">
+            Awesome Weather
+          </span>
+          <div class="col-xs-2">
+            <div class="row middle-xs between-xs">
+              <span class="data">Your Position: {{data.latitude}},{{data.longitude}}</span>
+            </div>
+          </div>
+        </header>
+        <div class="currently {{data.icon}}" >
             {{selectedItem.name}}
             {{data.timezone}}
-        </h1>
+            {{data.latitude}}
+            {{data.longitude}}
+            {{data.temp}}
+        </div>
         <h2>
             JAJA!
         </h2>
+        </div>
         `
 })
 export class AppComponent implements OnInit {

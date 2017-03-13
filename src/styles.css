@@ -6,6 +6,25 @@
 .logo {
     font-family: 'Raleway', sans-serif;
 }
+.app-bar {
+  padding: 5px 30px;
+  background-color: #00BCD4;
+}
+.logo {
+  color: white;
+  font-size: 28px;
+  line-height: 1.3em;
+  font-weight: 300;
+  cursor: pointer;
+}
+.data {
+  color: white;
+  font-size: 12px;
+  line-height: 1.3em;
+  font-weight: 400;
+  cursor: pointer;
+}
+
 .clear-day::before {
   content:"\f00d";
   font-size: 40px;

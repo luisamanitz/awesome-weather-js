@@ -9,8 +9,6 @@ export default class ApiService {
 
     constructor (private jsonp: Jsonp) {}
 
-    public test = 'huhuhuhuhu';
-
     public geoLocation = {
         coords: {
             latitude: 0,
@@ -21,8 +19,22 @@ export default class ApiService {
     private apiUrl = '';
 
     private extractData(res: Response) {
-        let body = res.json();
-        return body || { };
+        let data = res.json();
+        let temp = ((f) => {
+          let temperature = (f - 32) * 5 / 9;
+          // runden
+          return temperature;
+        })(data.currently.temperature);
+        // this.getCelsius(data.currently.temperature);
+
+        let result = {
+            icon: data.currently.icon,
+            latitude: data.latitude,
+            longitude: data.longitude,
+            temp: temp
+        }
+
+        return result || { };
     }
 
     public getData = () => {
