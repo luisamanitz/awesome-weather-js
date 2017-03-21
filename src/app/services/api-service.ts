@@ -43,8 +43,8 @@ export default class ApiService {
             longitude: Math.round((data.longitude) * 100) / 100,
             temp: temp,
             today: date,
-            precipitation: data.currently.precipProbability,
-            humidity: data.currently.humidity,
+            precipitation: Math.round((data.currently.precipProbability) * 100),
+            humidity: Math.round((data.currently.humidity) * 100),
             summary: data.currently.summary,
         }
 
